@@ -41,11 +41,11 @@ public class HelloController {
 
         // Тестовые данные
         games.addAll(
-                new Game("The Witcher 3", "RPG", "PC", 9.8),
-                new Game("Elden Ring", "RPG", "PlayStation", 9.6),
-                new Game("GTA V", "Экшен", "PC", 9.5),
-                new Game("CS:GO / CS2", "Шутер", "PC", 8.8),
-                new Game("FIFA 24", "Спорт", "Xbox", 7.5)
+                new Game("", "", ", 9),
+                new Game("", ", "", 3),
+                new Game("", "", "PC", ),
+                new Game("", "", "", 8),
+                new Game("", "", "", 5)
         );
 
         // Наполнение ComboBox и ListView
