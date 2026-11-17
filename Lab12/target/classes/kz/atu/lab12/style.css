@@ -1,0 +1,179 @@
+.root {
+    -fx-background-color: #12151e;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Верхняя панель */
+.header-box {
+    -fx-background-color: #1a1f2e;
+    -fx-border-color: #2a3147;
+    -fx-border-width: 0 0 1 0;
+}
+
+.app-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Поля ввода */
+.text-field {
+    -fx-background-color: #23293a;
+    -fx-text-fill: #f1f5f9;
+    -fx-prompt-text-fill: #64748b;
+    -fx-background-radius: 6;
+    -fx-border-color: #334155;
+    -fx-border-radius: 6;
+    -fx-padding: 7 12;
+}
+
+.text-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-background-color: #283044;
+}
+
+/* Выпадающие списки */
+.combo-box {
+    -fx-background-color: #23293a;
+    -fx-background-radius: 6;
+    -fx-border-color: #334155;
+    -fx-border-radius: 6;
+    -fx-padding: 2 6;
+}
+
+.combo-box:focused {
+    -fx-border-color: #3b82f6;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #f1f5f9;
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #94a3b8;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #23293a;
+    -fx-border-color: #334155;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #23293a;
+    -fx-text-fill: #f1f5f9;
+    -fx-padding: 6 12;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+}
+
+.slash-label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Таблица */
+.table-view {
+    -fx-background-color: #161a24;
+    -fx-border-color: #2a3147;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1e2433;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: #2a3147;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 8 5;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #161a24;
+    -fx-border-color: #1e2433;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #191e2a;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #242b3d;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2563eb;
+}
+
+.table-cell {
+    -fx-text-fill: #e2e8f0;
+    -fx-padding: 6 10;
+}
+
+/* Нижняя панель формы */
+.form-box {
+    -fx-background-color: #1a1f2e;
+    -fx-border-color: #2a3147;
+    -fx-border-width: 1 0 0 0;
+}
+
+.form-label {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-weight: bold;
+}
+
+.status-label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+}
+
+/* Кнопки */
+.button {
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.btn-add {
+    -fx-background-color: #10b981;
+}
+.btn-add:hover {
+    -fx-background-color: #059669;
+}
+
+.btn-update {
+    -fx-background-color: #3b82f6;
+}
+.btn-update:hover {
+    -fx-background-color: #2563eb;
+}
+
+.btn-delete {
+    -fx-background-color: #ef4444;
+}
+.btn-delete:hover {
+    -fx-background-color: #dc2626;
+}
+
+.btn-refresh {
+    -fx-background-color: #475569;
+}
+.btn-refresh:hover {
+    -fx-background-color: #334155;
+}

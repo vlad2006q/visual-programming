@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com" xmlns:fx="http://javafx.com"
+            fx:controller="kz.atu.lab12.controller.MovieController"
+            stylesheets="@style.css" prefWidth="800" prefHeight="580">
+
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="header-box">
+            <padding><Insets top="12" right="18" bottom="12" left="18"/></padding>
+
+            <ImageView fitWidth="45" fitHeight="45" preserveRatio="true">
+                <image>
+                    <Image url="@cinema.gif"/>
+                </image>
+            </ImageView>
+
+            <Label text="Каталог фильмов" styleClass="app-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="txtSearch" promptText="🔍 Поиск по названию..." prefWidth="260"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox>
+            <padding><Insets top="12" right="18" bottom="12" left="18"/></padding>
+            <TableView fx:id="tableMovies" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="55"/>
+                    <TableColumn fx:id="colTitle" text="Название фильма" prefWidth="340"/>
+                    <TableColumn fx:id="colGenre" text="Жанр" prefWidth="220"/>
+                    <TableColumn fx:id="colRating" text="Рейтинг" prefWidth="110"/>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="12" styleClass="form-box">
+            <padding><Insets top="14" right="18" bottom="14" left="18"/></padding>
+            <GridPane hgap="12" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="115" prefWidth="115"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Название:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtTitle" promptText="Например: Интерстеллар" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Жанры:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <HBox spacing="10" alignment="CENTER_LEFT" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                    <ComboBox fx:id="cmbGenre1" promptText="Основной жанр..." maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                    <Label text="/" styleClass="slash-label"/>
+                    <ComboBox fx:id="cmbGenre2" promptText="Доп. жанр (необязательно)..." maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                </HBox>
+
+                <Label text="Рейтинг (0–10):" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtRating" promptText="Например: 8.7" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button text="+ Добавить" onAction="#onAdd" styleClass="btn-add"/>
+                <Button text="✎ Изменить" onAction="#onUpdate" styleClass="btn-update"/>
+                <Button text="🗑 Удалить" onAction="#onDelete" styleClass="btn-delete"/>
+                <Button text="↻ Сброс / Обновить" onAction="#onRefresh" styleClass="btn-refresh"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="lblStatus" text="Записей: 0" styleClass="status-label"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
